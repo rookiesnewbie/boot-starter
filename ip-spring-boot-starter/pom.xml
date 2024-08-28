@@ -7,10 +7,10 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>test-custom-boot-starter</artifactId>
+    <artifactId>ip-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
 
-    <name>test-custom-boot-starter</name>
+    <name>ip-spring-boot-starter</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -18,6 +18,7 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -25,21 +26,33 @@
         </dependency>
 
         <dependency>
-            <groupId>com.lt</groupId>
-            <artifactId>log-validation-boot-starter</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.34</version>
-            <scope>compile</scope>
         </dependency>
-
         <dependency>
-            <groupId>com.lt</groupId>
-            <artifactId>ip-spring-boot-starter</artifactId>
-            <version>1.0.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.2.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>2.2.2.RELEASE</version>
+            <optional>true</optional> <!-- 用于生成配置元数据 -->
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

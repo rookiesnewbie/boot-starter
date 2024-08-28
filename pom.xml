@@ -12,6 +12,7 @@
   <modules>
     <module>log-validation-boot-starter</module>
     <module>test-custom-boot-starter</module>
+      <module>ip-spring-boot-starter</module>
   </modules>
 
   <properties>
