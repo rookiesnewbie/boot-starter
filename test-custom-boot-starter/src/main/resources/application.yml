@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: custom-starter
+
+
+custom:
+  log:
+    packages: com.lt.controller
+
+server:
+  port: 8089
+
+logging:
+
+  level.com.lt: debug
+
